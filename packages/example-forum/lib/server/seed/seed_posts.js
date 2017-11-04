@@ -93,9 +93,9 @@ if (getSetting('forum.seedOnStart')) {
       document: user,
       validate: false
     });
-  }
+  };
 
-  var createDummyUsers = function () {
+var createDummyUsers = function () {
     console.log('// inserting dummy users…');
     createUser('Bruce', 'dummyuser1@telescopeapp.org');
     createUser('Arnold', 'dummyuser2@telescopeapp.org');
@@ -130,7 +130,7 @@ if (getSetting('forum.seedOnStart')) {
     createComment("removing_getting_started_posts", "Bruce", "Yippee ki-yay!");
     createComment("removing_getting_started_posts", "Arnold", "I'll be back.", "Yippee ki-yay!");
 
-  };
+  }; 
 
   Vulcan.removeGettingStartedContent = () => {
     Users.remove({'profile.isDummy': true});
@@ -151,6 +151,6 @@ if (getSetting('forum.seedOnStart')) {
     if (!Comments.find().count()) {
       createDummyComments();
     }
-  });
+  }); 
 
 }
